@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         彭博查看更多
 // @namespace    https://github.com/gui-ying233/MoreFreeBBG
-// @version      1.0.0
+// @version      1.0.1
 // @description  去除彭博的订阅提示并显示更多内容（不一定能完全显示）
 // @author       鬼影233
 // @license      MIT
@@ -17,7 +17,7 @@
 	document.head.appendChild(
 		Object.assign(document.createElement("style"), {
 			textContent:
-				"#slidingSheet,div[class^='media-ui-Placeholder_placeholderParagraphWrapper']{display:none}body::before,nav[data-component=nav]::after{content:initial!important}html:not(#MoreFreeBBG),body:not(#MoreFreeBBG){overflow:initial!important;position:initial!important;height:initial!important;width:initial!important;pointer-events:initial!important}#__next>div>div[class^='media-ui-LeaderboardAd_parallaxWrapper']{height:initial;overflow-y:initial}div[class^='styles_articleBlur']{-webkit-mask-image:initial;mask-image:initial}#MoreFreeBBG>*{all:revert;text-wrap:pretty;content-visibility:auto}#MoreFreeBBG p,#MoreFreeBBG li{font-family:var(--article-headline-font-family-serif);font-size:var(--article-body-size);line-height:var(--article-body-line-height);margin-bottom:1.375rem}@media(min-width:48rem){#MoreFreeBBG p,#MoreFreeBBG li{margin-bottom:1.5rem}}#MoreFreeBBG a{-webkit-text-decoration-skip:ink;text-decoration:underline;text-decoration-color:#767676;text-decoration-skip-ink:auto;text-decoration-thickness:1px;text-underline-offset:.1875rem}div[class^='FeatureContent_content']>#MoreFreeBBG{margin-left:auto;margin-right:auto}@media(min-width:768px){div[class^='FeatureContent_content']>#MoreFreeBBG{max-width:38.625rem}}#MoreFreeBBG a.inline-ref{--tw-border-opacity:1;--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity));border-color:rgba(0,0,0,var(--tw-border-opacity));border-width:1px;color:rgba(0,0,0,var(--tw-text-opacity));font-family:BWHaasGroteskWeb,BWHaasGroteskWeb-fallback,Helvetica,Arial,sans-serif;font-size:.625rem;line-height:1.5;margin:.3125rem;padding:.1875rem .375rem;vertical-align:.25rem;text-decoration:none}#MoreFreeBBG li.footer-ref,#MoreFreeBBG li.footer-ref *{font-size:var(--phx-font-core-size-14)}#MoreFreeBBG li.footer-ref>a{display:inline-block}#MoreFreeBBG pre{font-family:monospace,monospace;white-space:pre-wrap;word-break:break-all;color:var(--phx-color-error-primary-text);background-color:var(--phx-color-error-background);padding:1em;max-height:calc(75vh - 1em);overflow-y:auto}#MoreFreeBBG figure>img,#MoreFreeBBG figure>iframe,#MoreFreeBBG figure>video{border:2px outset #767676;box-sizing:border-box}#MoreFreeBBG figcaption{font-size:var(--phx-font-core-size-14)}[id]{scroll-margin-block-start:200px}#MoreFreeBBG .chart{width:100%;position:relative;padding-block-end:1.75em}#MoreFreeBBG .chart>iframe{position:absolute;inset:0;width:100%;height:100%}#reading{width:100%}",
+				"#slidingSheet,div[class^='media-ui-Placeholder_placeholderParagraphWrapper']{display:none}body::before,nav[data-component=nav]::after{content:initial!important}html:not(#MoreFreeBBG),body:not(#MoreFreeBBG){overflow:initial!important;position:initial!important;height:initial!important;width:initial!important;pointer-events:initial!important}#__next>div>div[class^='media-ui-LeaderboardAd_parallaxWrapper']{height:initial;overflow-y:initial}div[class^='styles_articleBlur']{-webkit-mask-image:initial;mask-image:initial}#MoreFreeBBG>*{all:revert;text-wrap:pretty;content-visibility:auto}#MoreFreeBBG p,#MoreFreeBBG li{font-family:var(--article-headline-font-family-serif);font-size:var(--article-body-size);line-height:var(--article-body-line-height);margin-bottom:1.375rem}@media(min-width:48rem){#MoreFreeBBG p,#MoreFreeBBG li{margin-bottom:1.5rem}}#MoreFreeBBG a{-webkit-text-decoration-skip:ink;text-decoration:underline;text-decoration-color:#767676;text-decoration-skip-ink:auto;text-decoration-thickness:1px;text-underline-offset:.1875rem}div[class^='FeatureContent_content']>#MoreFreeBBG{margin-left:auto;margin-right:auto}@media(min-width:768px){div[class^='FeatureContent_content']>#MoreFreeBBG{max-width:38.625rem}}#MoreFreeBBG a.inline-ref{--tw-border-opacity:1;--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity));border-color:rgba(0,0,0,var(--tw-border-opacity));border-width:1px;color:rgba(0,0,0,var(--tw-text-opacity));font-family:BWHaasGroteskWeb,BWHaasGroteskWeb-fallback,Helvetica,Arial,sans-serif;font-size:.625rem;line-height:1.5;margin:.3125rem;padding:.1875rem .375rem;vertical-align:.25rem;text-decoration:none}#MoreFreeBBG li.footer-ref,#MoreFreeBBG li.footer-ref *{font-size:var(--phx-font-core-size-14)}#MoreFreeBBG li.footer-ref>a{display:inline-block}#MoreFreeBBG pre{font-family:monospace,monospace;white-space:pre-wrap;word-break:break-all;color:var(--phx-color-error-primary-text);background-color:var(--phx-color-error-background);padding:1em;max-height:calc(75vh - 1em);overflow-y:auto}#MoreFreeBBG figure>img,#MoreFreeBBG figure>iframe,#MoreFreeBBG figure>video{border:2px outset #767676;box-sizing:border-box}#MoreFreeBBG figcaption{font-size:var(--phx-font-core-size-14)}[id]{scroll-margin-block-start:200px}#MoreFreeBBG .chart{width:100%;position:relative;margin:0;padding-block-end:1.75em}#MoreFreeBBG .chart>iframe{position:absolute;inset:0;width:100%;height:100%}#reading{width:100%}",
 		}),
 	);
 	const ref = [];
@@ -122,31 +122,19 @@
 								return Object.assign(
 									document.createElement("figure"),
 									{
+										id: t.src,
 										className: "chart",
-										innerHTML: `${
-											Object.assign(
-												document.createElement("img"),
-												{
-													decoding: "async",
-													fetchpriority: "low",
-													loading: "lazy",
-													align: t.align,
-													alt: t.alt,
-													src: t.fallback,
-												},
-											).outerHTML
-										}${
-											Object.assign(
-												document.createElement(
-													"iframe",
-												),
-												{
-													loading: "lazy",
-													align: t.align,
-													src: t.src,
-												},
-											).outerHTML
-										}`,
+										innerHTML: Object.assign(
+											document.createElement("img"),
+											{
+												decoding: "async",
+												fetchpriority: "low",
+												loading: "lazy",
+												align: t.align,
+												alt: t.alt,
+												src: t.fallback,
+											},
+										).outerHTML,
 									},
 								).outerHTML;
 							case "video":
@@ -252,6 +240,13 @@
 						return console.warn(c);
 					case "br":
 						return document.createElement("br").outerHTML;
+					case "blockquote":
+						return Object.assign(
+							document.createElement("blockquote"),
+							{
+								innerHTML: parser(c.content),
+							},
+						).outerHTML;
 				}
 				return Object.assign(document.createElement("pre"), {
 					textContent: JSON.stringify(c, null, "\t"),
@@ -260,8 +255,9 @@
 			.filter(Boolean)
 			.join("");
 	const story = JSON.parse(
-		document.getElementById("__NEXT_DATA__").textContent,
+		document.getElementById("__NEXT_DATA__")?.textContent,
 	).props.pageProps.story;
+	if (!story) return;
 	document
 		.querySelector(".body-content,div[class^='FeatureContent_body']")
 		?.replaceWith(
@@ -304,4 +300,20 @@
 				}`,
 			}),
 		);
+	[
+		...document.body.querySelectorAll("#MoreFreeBBG figure.chart[id]"),
+	].forEach(c => {
+		fetch(c.id, { method: "HEAD" })
+			.then(r => {
+				if (!r.ok) return;
+				const f = Object.assign(document.createElement("iframe"), {
+					loading: "lazy",
+					align: c.getElementsByTagName("img")[0].align,
+				});
+				c.appendChild(f);
+				f.src = r.url;
+			})
+			.catch(e => console.warn(e));
+		c.removeAttribute("id");
+	});
 })();
